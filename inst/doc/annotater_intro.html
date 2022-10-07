@@ -341,7 +341,7 @@ problematic script. Scripts get passed around, code is copied and
 pasted, and we might not know what certain packages are for.
 Additionally, it is often useful to specify a package’s source and
 version within a script, for reproducibility purposes and to keep a
-record of where any the packages can be obtained.</p>
+record of where any of the packages can be obtained.</p>
 <div id="package-functions" class="section level2">
 <h2>Package functions</h2>
 <p>This package works around a suite of functions that match package
@@ -378,7 +378,7 @@ paste the repository source and version number.</p>
 the output from <code>annotate_repostitle</code>.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>pkgs_string <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;library(boot)</span><span class="sc">\n</span><span class="st">require(lattice)&quot;</span>)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">annotate_repostitle</span>(pkgs_string)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;boot # Bootstrap Functions (Originally by Angelo Canty for S), CRAN v1.3-28\nlattice # Trellis Graphics for R, CRAN v0.20-45&quot;</span></span></code></pre></div>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;library(boot) # Bootstrap Functions (Originally by Angelo Canty for S), CRAN v1.3-28\nrequire(lattice) # Trellis Graphics for R, CRAN v0.20-45&quot;</span></span></code></pre></div>
 <p>To annotate which functions are being called from each loaded
 package, use <code>annotate_fun_calls</code>.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>testcode <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&#39;library(purrr) </span></span>
@@ -388,15 +388,16 @@ package, use <code>annotate_fun_calls</code>.</p>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">annotate_fun_calls</span>(testcode)</span>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;library(purrr) # pluck map \nx &lt;- list(\&quot;a\&quot;, 1, c(\&quot;bo\&quot;,\&quot;bi\&quot;,\&quot;bu\&quot;))\npluck(x, 1)\nmap(x, pluck, 2)&quot;</span></span></code></pre></div>
 </div>
-<div id="a-note-on-the-tidyverse" class="section level2">
-<h2>A note on the <code>tidyverse</code></h2>
+<div id="a-note-on-the-tidyverse-and-other-metapackages" class="section level2">
+<h2>A note on the <code>tidyverse</code> and other metapackages</h2>
 <p>The <code>tidyverse</code> package is a meta-package with few
 exported functions of its own, so the annotation tools provided here
 (<code>annotate_fun_calls</code>) will not match the functions from the
 various individual packages (such as <code>dplyr</code> or
 <code>readr</code>) that get attached when loading
-<code>tidyverse</code>. This is by design, so consider loading
-individual packages if annotations for function calls are desired.</p>
+<code>tidyverse</code>. As of version 0.2.2, load calls for metapackages
+can be replaced with separate calls to each of the core metapackage
+components as defined by their respective <em>attach.R</em> files.</p>
 </div>
 <div id="usage-in-rstudio" class="section level2">
 <h2>Usage in RStudio</h2>
@@ -423,6 +424,11 @@ symbols vertically for aesthetic purposes.</p>
 <h4>Annotate each package’s function calls</h4>
 <p>Adds all the unique functions being called by each loaded package,
 calls <code>annotate_fun_calls</code>.</p>
+</div>
+<div id="expand-metapackages" class="section level4">
+<h4>Expand metapackages</h4>
+<p>Replace a call to a metapackage with multiple calls to each of its
+core components.</p>
 </div>
 </div>
 

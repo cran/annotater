@@ -1,6 +1,6 @@
 Package: annotater
 Title: Annotate Package Load Calls
-Version: 0.2.1
+Version: 0.2.2
 Authors@R: 
     person(given = "Luis D.",
            family = "Verde Arregoitia",
@@ -12,17 +12,17 @@ Description: Provides non-invasive annotation of package load calls
     the packages we are loading are meant for.
 License: MIT + file LICENSE
 Encoding: UTF-8
-RoxygenNote: 7.2.0
+RoxygenNote: 7.2.1
 Imports: stringr, purrr, tibble, dplyr, stringi, readr, rstudioapi,
-        tidyr, rlang
+        tidyr, rlang,
 URL: https://github.com/luisDVA/annotater, https://annotater.liomys.mx
 BugReports: https://github.com/luisDVA/annotater/issues
 Suggests: testthat, knitr, rmarkdown, covr
 VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2022-06-14 18:14:33 UTC; luisd
+Packaged: 2022-10-07 14:36:52 UTC; luisd
 Author: Luis D. Verde Arregoitia [aut, cre]
     (<https://orcid.org/0000-0001-9520-6543>)
 Maintainer: Luis D. Verde Arregoitia <luis@liomys.mx>
 Repository: CRAN
-Date/Publication: 2022-06-15 13:20:02 UTC
+Date/Publication: 2022-10-07 14:50:06 UTC
