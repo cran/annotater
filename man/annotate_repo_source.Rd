@@ -2,7 +2,7 @@
 % Please edit documentation in R/annotate_repo_source.R
 \name{annotate_repo_source}
 \alias{annotate_repo_source}
-\title{Annotate Repository Sources}
+\title{Annotate repository sources}
 \usage{
 annotate_repo_source(string_og)
 }
@@ -13,10 +13,10 @@ annotate_repo_source(string_og)
 text string with package repository source annotations. Will make
   note of packages not currently installed. Lines with existing comments or
   annotations are ignored by the regular expression that matches package
-  names. Also ignores base packages.
+  names. Also ignores base packages. Local installs now annotated as such.
 }
 \description{
-Annotate Repository Sources
+Annotate repository sources
 }
 \examples{
 test_string <- c("library(boot)\nrequire(lattice)")

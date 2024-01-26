@@ -1,4 +1,4 @@
-## ---- include = FALSE---------------------------------------------------------
+## ----include = FALSE----------------------------------------------------------
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
@@ -29,4 +29,10 @@ x <- list("a", 1, c("bo","bi","bu"))
 pluck(x, 1)
 map(x, pluck, 2)')
 annotate_fun_calls(testcode)
+
+## -----------------------------------------------------------------------------
+testcode <- c('library(tidyr) 
+summary(household)
+plot(fish_encounters)')
+annotate_pkg_datasets(testcode)
 

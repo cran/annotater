@@ -2,7 +2,7 @@
 % Please edit documentation in R/annotate_fun_calls.R
 \name{annotate_fun_calls}
 \alias{annotate_fun_calls}
-\title{Annotate Function Calls}
+\title{Annotate function calls}
 \usage{
 annotate_fun_calls(string_og)
 }
@@ -13,10 +13,11 @@ annotate_fun_calls(string_og)
 text string with function call annotations. Will make note of
   packages not currently installed. Lines with existing comments or
   annotations are ignored by the regular expression that matches package
-  names.
+  names. Be aware that package-specific methods (e.g., print or summary
+  methods) will be annotated too.
 }
 \description{
-Annotate Function Calls
+Annotate function calls
 }
 \examples{
 test_string <- c("library(boot)\nrequire(lattice)\ncanonical.theme()")

@@ -39,6 +39,8 @@ script.
 
 <img src='https://raw.githubusercontent.com/luisdva/annotater/master/inst/media/jcruz.gif' align="center" width="400px" />
 
+As of version 0.2.3, loaded datasets can also be added as annotations.
+
 ## `pacman` compatibility
 
 Users of the [`pacman`](https://cran.r-project.org/package=pacman)
@@ -100,7 +102,8 @@ annotations for function calls are desired.
 
 Feedback welcome
 
-Thanks to [Jonathan Carroll](https://github.com/jonocarroll), [Fırat
-Melih Yılmaz](https://twitter.com/fratmelhylmaz), and [Achaz von
+Thanks to [Jonathan Carroll](https://github.com/jonocarroll), [Firat
+Melih Yilmaz](https://github.com/fmyilmaz), [Paul
+Schmidt](https://github.com/SchmidtPaul), and [Achaz von
 Hardenberg](https://github.com/achazhardenberg) for feedback and
 suggestions.

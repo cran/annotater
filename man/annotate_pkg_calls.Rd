@@ -2,7 +2,7 @@
 % Please edit documentation in R/annotate_pkg_calls.R
 \name{annotate_pkg_calls}
 \alias{annotate_pkg_calls}
-\title{Annotate Package Calls}
+\title{Annotate package calls}
 \usage{
 annotate_pkg_calls(string_og, pkg_field = "Title")
 }
@@ -15,10 +15,9 @@ annotate_pkg_calls(string_og, pkg_field = "Title")
 \value{
 Text string with package Title annotations. Will make note of
   packages not currently installed.
-#'
 }
 \description{
-Annotate Package Calls
+Annotate package calls
 }
 \examples{
 test_string <- c("library(boot)\nrequire(tools)")
