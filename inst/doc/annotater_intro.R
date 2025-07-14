@@ -16,11 +16,11 @@ pkgs_string <- c("library(boot)\nrequire(tools)")
 annotate_pkg_calls(pkgs_string)
 
 ## -----------------------------------------------------------------------------
-pkgs_string <- c("library(boot)\nrequire(lattice)")
+pkgs_string <- c("library(knitr)\nrequire(datasets)")
 annotate_repo_source(pkgs_string)
 
 ## -----------------------------------------------------------------------------
-pkgs_string <- c("library(boot)\nrequire(lattice)")
+pkgs_string <- c("library(rlang)\nrequire(datasets)")
 annotate_repostitle(pkgs_string)
 
 ## -----------------------------------------------------------------------------
